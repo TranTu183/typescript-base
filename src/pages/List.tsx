@@ -37,14 +37,20 @@ function ListPage() {
         <table className="w-full border border-gray-300 rounded-lg">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-4 py-2 border border-gray-300 text-left">ID</th>
-              <th className="px-4 py-2 border border-gray-300 text-left">
+              <th className="px-4 py-2 border border-gray-300 text-center">ID</th>
+              <th className="px-4 py-2 border border-gray-300 text-center">
                 Name
               </th>
-              <th className="px-4 py-2 border border-gray-300 text-left">
+              <th className="px-4 py-2 border border-gray-300 text-center">
+                Credit
+              </th>
+               <th className="px-4 py-2 border border-gray-300 text-center">
+                Category
+              </th>
+              <th className="px-4 py-2 border border-gray-300 text-center">
                 Teacher
               </th>
-              <th className="px-4 py-2 border border-gray-300 text-left">
+              <th className="px-4 py-2 border border-gray-300 text-center">
                 Actions
               </th>
             </tr>
@@ -54,13 +60,18 @@ function ListPage() {
             {courses.map((item) => (
               <tr className="hover:bg-gray-50">
                 <td className="px-4 py-2 border border-gray-300">{item.id}</td>
-                <td className="px-4 py-2 border border-gray-300">
-                  {item.name}
-                </td>
+                <td className="px-4 py-2 border border-gray-300">{item.name}</td>
+                <td className="px-4 py-2 border border-gray-300">{item.credit}</td>
+                <td className="px-4 py-2 border border-gray-300"> {item.category}</td>
                 <td className="px-4 py-2 border border-gray-300">
                   {item.teacher}
                 </td>
-                <td className="px-4 py-2 border border-gray-300">Edit</td>
+                <button className="px-3 py-1 bg-blue-500 text-white rounded">
+                    Edit
+                  </button>
+                  <button className="px-3 py-1 bg-red-500 text-white rounded">
+                    Delete
+                  </button>
               </tr>
             ))}
           </tbody>
