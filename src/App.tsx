@@ -2,9 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { Link, Route, Routes } from "react-router-dom";
 import ListPage from "./pages/List";
 import AddPage from "./pages/Add";
-// import ListPage from "./pages/List";
-// import AddPage from "./pages/Add";
-// import EditPage from "./pages/Edit";
+import EditPage from "./pages/Edit";
 
 function App() {
   return (
@@ -40,10 +38,10 @@ function App() {
 
       {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
-        <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB502</h1>
         <Routes>
           <Route path="/list" element={<ListPage />}></Route>
           <Route path="/add" element={<AddPage />}></Route>
+          <Route path="/edit/:id" element={<EditPage />}></Route>
         </Routes>
       </div>
 
